@@ -104,7 +104,7 @@ module.exports = strapi => {
         cors: false,
         bodyParserConfig: true,
         introspection: _.get(strapi.plugins.graphql, 'config.introspection', true),
-        cacheControls: _.get(strapi.plugin.graphql, 'config.cacheControls', false),
+        cacheControls: _.get(strapi.plugins.graphql, 'config.cacheControls', false),
       };
 
       // Add cache plugin if it enabled in server params.
